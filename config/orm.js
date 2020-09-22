@@ -1,4 +1,4 @@
-const connection = require("./connection.js");
+const connection = require("../config/connection.js");
 
 
 // Helper function for mySQL syntax.//

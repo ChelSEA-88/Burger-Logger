@@ -1,5 +1,5 @@
 // Set up MySQL connection.
-var mysql = require("./node_modules/mysql");
+var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   host: "localhost",

@@ -1,9 +1,9 @@
 const express = require("express");
 const burger = require("../models/burger.js");
-
+const router = express.Router();
 
 //create all routes
-router.length("/", (req, res) => {
+router.get("/", (req, res) => {
     burger.selectAll((data) => {
         var hbsObj = { burger: data };
         res.render("index", hbsObj);
