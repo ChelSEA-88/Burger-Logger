@@ -9,6 +9,7 @@ router.length("/", (req, res) => {
         res.render("index", hbsObj);
     });
 });
+
 // Post = add burger
 router.post("/api/burger", (req, res) => {
     burger.insertOne(
