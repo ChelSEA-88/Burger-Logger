@@ -1,17 +1,20 @@
 const express = require("express");
-const path = require("path");
+// const path = require("path");
 const app = express();
-const bodyParser = require("body-parser");
-const exphbs = require("express-handlebars");
+// const bodyParser = require("body-parser");
+
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static("public"));
 
 const PORT = process.env.PORT || 8090;
 
 // Parse request body as JSON
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+//set handlebars
+const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
