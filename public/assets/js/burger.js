@@ -1,5 +1,5 @@
 
-$(function() {
+$(document).ready(function() {
 
     // Add a new burger.
     $(".new-burger-form").on("submit", function(event) {
@@ -10,7 +10,8 @@ $(function() {
             devoured: 0
         };
 
-        // Send the POST request.
+        console.log(newBurger);
+        //Send the POST request.
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
@@ -25,6 +26,8 @@ $(function() {
     // Eat a burger
     $(".eatbutton").on("click", function(event) {
         event.preventDefault();
+
+        console.log("button clkicked")
 
         let id = $(this).data("id");
         let devoured = {
@@ -43,7 +46,7 @@ $(function() {
 
 
     // Trash an eaten burger
-    $(".trashbutton").on("click", function(event) {
+    $(".delete").on("click", function(event) {
         event.preventDefault();
 
         var id = $(this).data("id");
