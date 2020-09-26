@@ -1,22 +1,17 @@
 body {
-    background-image: radial-gradient(#d6ccc2 8%, transparent 8%),
-     radial-gradient(#d6ccc2 8%, transparent 8%);
-  background-color: #e6d7c7;
-  background-position: 0 0, 50px 50px;
-  background-size: 100px 100px;
-  height: 200px;
-  width: 100%;
-  min-height: 100%
+  background-color: #66d9ff;
+
 }
 
 .jumbotron {
-  background-color: #c6d8d3;
+  background-color: #fad69e;
+  font-size: 3em;
 }
 
 #uneaten-header {
   padding: 10px 0;
   margin-bottom: 10px;
-  background-color: #2d3047;
+  background-color: #ff0000;
   color: white;
   text-align: center;
 
@@ -30,7 +25,7 @@ body {
 #devoured-header {
   padding: 10px 0;
   margin-bottom: 10px;
-  background-color: #e0a458;
+  background-color: #ffcc00;
   color: white;
   text-align: center;
 }
